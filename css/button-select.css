@@ -1,0 +1,9 @@
+/* node button */
+svg#viewer.bf-select g.node > g:nth-child(3) > circle {
+    fill: lightgreen;
+    stroke: green;
+}
+
+svg#viewer.bf-select g.node > g:nth-child(3) > g.hidden {
+    display: unset;
+}

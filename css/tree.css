@@ -1,0 +1,56 @@
+svg#viewer {
+    stroke: #555555;
+}
+
+svg#viewer rect {
+    fill: white;
+}
+
+svg#viewer text {
+}
+
+/* node button */
+svg#viewer g.node > g:nth-child(3) > circle {
+    cursor: pointer;
+}
+svg#viewer g.node > g:nth-child(3) > g {
+    display: none;
+    pointer-events: none;
+    stroke-width: 2;
+}
+
+/* child nodes/leaves & horizontal line */
+svg#viewer g.node.pseudo > g:last-child,
+svg#viewer g.node.pseudo > line:last-of-type {
+}
+
+
+/* leaf button */
+svg#viewer g.leaf rect {
+    fill: #FFFFFF;
+    cursor: pointer;
+}
+svg#viewer g.leaf rect:hover {
+    fill: #CCCCCC;
+    cursor: pointer;
+}
+
+/* leaf button label */
+svg#viewer g.leaf g text {
+    font-size: 15px;
+    dominant-baseline: middle;
+    text-anchor: middle;
+    pointer-events: none;
+
+    stroke: #222222;
+}
+svg#viewer g.leaf.selected rect {
+    fill: lightgreen;
+}
+svg#viewer g.leaf.selected text {
+}
+svg#viewer g.leaf.preserved rect {
+    stroke: red;
+}
+svg#viewer g.leaf.preserved text {
+}

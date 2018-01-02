@@ -1,0 +1,66 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* flex tree-div */
+body {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: column;
+}
+body div {
+    -webkit-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+body div#cviewer {
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+
+    overflow: auto;
+    border: 1px solid black;
+}
+
+
+#top-panel, #submit-panel {
+    padding-left: 0.5em;
+}
+
+
+#top-panel > select{
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+}
+
+/* begin search */
+button, input {
+    box-sizing: border-box;
+}
+#accession-input, #find {
+    box-sizing: border-box;
+}
+#accession-input {
+    width: 70%;
+}
+#find {
+    float: right;
+}
+/* end search */
+
+
+/* begin tools */
+#toggle-all, #help {
+    float: right;
+}
+/* end tools */
+
+
+/* begin submit */
+#submit-panel > button {
+    float:right;
+}
+/* end submit */

@@ -1,0 +1,25 @@
+/* for all */
+svg#viewer.bf-fold g.node > g:nth-child(3) > g.fold {
+    display: unset;
+}
+
+/* not hidden */
+svg#viewer.bf-fold g.node > g:nth-child(3) > circle {
+    fill: white;
+    stroke: blue;
+}
+svg#viewer.bf-fold g.node > g:nth-child(3) > g.fold > line:last-child {
+    display: none;
+}
+
+/* hidden */
+svg#viewer.bf-fold g.node.pseudo > g:nth-child(3) > circle {
+    fill: red;
+    stroke: red;
+}
+svg#viewer.bf-fold g.node.pseudo > g:nth-child(3) > g.fold {
+    stroke: white;
+}
+svg#viewer.bf-fold g.node.pseudo > g:nth-child(3) > g.fold > line:last-child {
+    display: unset;
+}

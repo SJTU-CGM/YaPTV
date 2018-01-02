@@ -1,0 +1,5 @@
+/* node button */
+svg#viewer.bf-preserve g.node > g:nth-child(3) > circle {
+    fill: white;
+    stroke: red;
+}

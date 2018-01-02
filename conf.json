@@ -1,0 +1,5 @@
+{
+    "path" : "./sample_tree.json",
+    "tree_padding": 150,
+    "branch_unit": 1300
+}

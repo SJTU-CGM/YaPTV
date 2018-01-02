@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yet another Phylogenetic Tree Viewer</title>
+    <script src="js/library/zepto.min.js"></script>
+    <script src="js/library/whiteout.js"></script>
+    <script src="js/head.js"></script>
+    <script src="js/tools.js"></script>
+    <script src="js/svg.js"></script>
+    <script src="js/viewer.js"></script>
+    <script src="js/tree.js"></script>
+    <script src="js/handle.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/tree.css">
+    <link rel="stylesheet" type="text/css" href="css/button-fold.css">
+    <link rel="stylesheet" type="text/css" href="css/button-select.css">
+    <link rel="stylesheet" type="text/css" href="css/button-preserve.css">
+  </head>
+
+  <body>
+    <div id="top-panel">
+      <input id="accession-input" type="text" placeholder="e.g. B001">
+      <button id="find" onclick="find()" title="Find and scroll to node possition by accession ID.">Find</button>
+      <br>
+      <label for="button-function">
+        Internal nodes:
+      </label>
+      <select id="button-function" onchange="changeButtonFunction()">
+        <option value="fold" selected="selected">fold</option>
+        <option value="select">select</option>
+        <option value="preserve">preserve</option>
+      </select>
+      <button id="help" onclick="help()" title="Show help text.">Help</button>
+      <br>
+      <label for="label-function">
+        Terminal nodes:
+      </label>
+      <select id="label-function" onchange="changeLabelFunction()">
+        <option value="select" selected="selected">select</option>
+        <option value="preserve">preserve</option>
+      </select>
+      <button id="toggle-all" onclick="toggleAll()" title="Hide/Show all showed/hidden nodes.">Hide All</button>
+    </div>
+    
+    <div id="cviewer">
+      <svg id="viewer" class="bf-fold lf-select"></svg>
+    </div>
+    
+    <div id="submit-panel">
+      <span>Selection: <span id="selected-acs-num">0</span></span>
+      <button onclick="HANDLE.submit()" title="Submit to JBrowse">Submit</button>
+      <button onclick="HANDLE.clearSelection()" title="Unselect all selected accessions.">Clear</button>
+      <button onclick="HANDLE.scrollToNextSelectedNode()" title="Scroll down to the nearest selected leaf.">Next Selected</button>
+    </div>
+
+    <!--press <Enter> to find-->
+    <script>
+      $('#accession-input').bind('keypress', function(e){if (e.keyCode == 13) {e.preventDefault(); find()}})
+    </script>
+  </body>
+</html>
