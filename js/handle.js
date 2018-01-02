@@ -18,6 +18,10 @@ HANDLE = {
   {
     this.submitHandle(this.getSelection());
   },
+  setSubmitHandle: function (proc)
+  {
+	  this.submitHandle = proc;
+  },
   setButtonFunction: function(func) {
     function bfclass(f) {
       var cls = "bf-" + f;
