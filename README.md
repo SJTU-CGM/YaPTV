@@ -1,4 +1,4 @@
-# YaPTV (This is a Chinese version, for English one, see below)
+# YaPTV
 
 Yet another Phylogenetic Tree Viewer
 
@@ -54,6 +54,3 @@ scrollTo(float x, float y)
 ```
 setSubmitHandle(Procedure handle)
 ```
-
-# YaPTV
-## Usage
