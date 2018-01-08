@@ -17,7 +17,7 @@ YaPTV（以下称本程序）是作为一个独立的网页而实现的。因此
 ```
 Node ::= {
     branch_length : <Float>,
-    children : [ Node | Leaf ]
+    children : Array< <Node> | <Leaf> >
 }
 
 Leaf ::= {
@@ -41,8 +41,8 @@ Top ::= {
 
 控制选取的叶节点
 ```JavaScript
-setSelection(Array<String> nameArray | Set<String> nameSet)
-getSelection() ==> Set<String>
+setSelection(Array<String> nameArray | Set<String> nameSet) : void
+getSelection() : Set<String>
 ```
 
 控制滚动条
